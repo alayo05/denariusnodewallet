@@ -1,0 +1,15 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.3
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - express > finalhandler > debug:
+        patched: '2019-04-12T09:09:24.133Z'
+    - github > https-proxy-agent > debug:
+        patched: '2019-04-12T09:09:24.133Z'
+    - express-status-monitor > socket.io > socket.io-adapter > socket.io-parser > debug:
+        patched: '2019-04-12T09:09:24.133Z'
+  'npm:extend:20180424':
+    - github > https-proxy-agent > extend:
+        patched: '2019-04-12T09:09:24.133Z'
