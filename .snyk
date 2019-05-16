@@ -12,11 +12,17 @@ patch:
         patched: '2019-04-12T09:09:24.133Z'
     - github > https-proxy-agent > debug:
         patched: '2019-04-12T09:14:41.247Z'
+    - github > https-proxy-agent > debug:
+        patched: '2019-05-16T05:35:51.379Z'
   'npm:extend:20180424':
     - github > https-proxy-agent > extend:
         patched: '2019-04-12T09:09:24.133Z'
     - github > https-proxy-agent > extend:
         patched: '2019-04-12T09:14:41.247Z'
+    - github > https-proxy-agent > extend:
+        patched: '2019-05-16T05:35:51.379Z'
   'npm:ms:20170412':
     - github > https-proxy-agent > debug > ms:
         patched: '2019-04-12T09:14:41.247Z'
+    - github > https-proxy-agent > debug > ms:
+        patched: '2019-05-16T05:35:51.379Z'
