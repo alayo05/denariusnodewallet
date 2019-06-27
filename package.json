@@ -63,7 +63,7 @@
     "unirest": "^0.5.1",
     "validator": "^9.4.1",
     "wallet-address-validator": "git://github.com/carsenk/wallet-address-validator",
-    "snyk": "^1.165.0"
+    "snyk": "^1.185.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
