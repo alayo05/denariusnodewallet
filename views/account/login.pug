@@ -1,29 +1,25 @@
 extends ../layout
 
 block content
-  .page-header
-    h3(align='center') Login
+    
   form.form-horizontal(method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
-    .form-group
-      label.col-sm-3.control-label(for='email') Email
-      .col-sm-7
-        input.form-control(type='email', name='email', id='email', placeholder='Email', autofocus, required)
-    .form-group
-      label.col-sm-3.control-label(for='password') Password
-      .col-sm-7
-        input.form-control(type='password', name='password', id='password', placeholder='Password', required)
-    .form-group
-      label.col-sm-3.control-label(for='recatpcha') Captcha
-      .col-sm-7
-        != captcha
-    .form-group
-      .col-sm-offset-3.col-sm-7
-        button.col-sm-3.btn.btn-default(type='submit')
-          i.fa.fa-user
-          | Login
-        a.btn.btn-link.forgot(href='/forgot') Forgot your password?
-    .form-group
-      .col-sm-offset-3.col-sm-7
-        hr
-  
+    .signin-wrapper
+      .signin-box
+        h2.slim-logo.slim-logo.text-center
+          img(src='../img/reecore.png', width='112px')        
+        .form-group
+          input.form-control(type='email', name='email', id='email', placeholder='Enter your email', autofocus, required)
+        .form-group
+          input.form-control(type='password', name='password', id='password', placeholder='Enter your password', required)
+        .mg-b-50
+          div
+            div(width='304px', height='78px;')
+              != captcha
+        button.btn.btn-primary.btn-block.btn-signin(type='submit')
+          i.fa.fa-user 
+          | Sign In
+        p.mg-b-0 Don't have an account? 
+          a(href='/signup') Sign Up
+        p.mg-b-0 Forgot your password? 
+          a(href='/forgot') Reset your password
