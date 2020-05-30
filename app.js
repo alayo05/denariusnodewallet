@@ -81,7 +81,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressValidator());
-recaptcha.init(process.env.RECAPTCHA_PUBLIC, process.env.RECAPTCHA_PRIVATE);
+/*recaptcha.init(process.env.RECAPTCHA_PUBLIC, process.env.RECAPTCHA_PRIVATE);*/
+recaptcha.init('6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe');
 app.use(session({
   resave: true,
   saveUninitialized: true,

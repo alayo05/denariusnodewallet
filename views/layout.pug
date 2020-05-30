@@ -11,9 +11,39 @@ html
     link(rel='stylesheet', href='/css/main.css')
     link(rel='stylesheet', href='/css/login.css')     
     link(rel='stylesheet', href='/css/lib/bootstrap-toggle.min.css')
+    link(rel='stylesheet', href='/css/menu.css')
+    
+    mixin menu(menuSelected)
+      div.menu
+        ul.menu__list
+          each menuItem in menuList
+            +menu_item(menuItem, menuSelected)
+
+    mixin menu_item(menuItem, menuSelected)
+      li.menu__item(class = menuSelected === menuItem.title ? "active" : "")
+        a.menu__link(href = menuItem.link)= menuItem.title
+          if menuItem.subnav.length > 0
+            .submenu
+              each submenuItem in menuItem.subnav
+                .submenu__item
+                  a.submenu__link(href=submenuItem.link)=submenuItem.title
+            
+    -
+      var menuList = [
+      {
+        title: "FDR Subsystem",
+        link: "",
+        showFooter: true,
+        subnav: [
+          {
+            title: "Action",
+            link: "/",
+          }
+        ]
+      }];
 
   body
-    include partials/header
+    include partials/header2
 
     .container
       include partials/flash
